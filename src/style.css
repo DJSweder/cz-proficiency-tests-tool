@@ -1,0 +1,235 @@
+/* ----------------------------- */
+/* Obecné nastavení textů nadpisů */
+/* ----------------------------- */
+h2, h3 {
+    margin-bottom: 10px; /* spodní okraj pro oddělení nadpisu od textu */
+}
+
+h2 { text-align: center; } /* hlavní nadpis vycentrovaný */
+h3 { text-align: left; }   /* podnadpis zarovnaný vlevo */
+
+/* ------------------------------------------- */
+/* Základní layout stránky, font a rozmístění  */
+/* ------------------------------------------- */
+body {
+    display: flex; /* flexibilní rozložení obsahu */
+    margin: 0; /* odstranění výchozích okrajů */
+    padding: 0; /* odstranění výchozích vnitřních mezer */
+    font-family: 'Segoe UI', sans-serif; /* základní typ písma */
+}
+
+/* ------------------------------- */
+/* Hlavní obsahová část (vpravo)   */
+/* ------------------------------- */
+#main-content {
+    flex-grow: 1; /* zabere dostupný zbývající prostor stránky */
+    padding: 20px; /* vnitřní odsazení obsahu od okrajů */
+}
+
+/* ------------------------------------ */
+/* Styly pro výběrové prvky a vyhledání */
+/* ------------------------------------ */
+#category, #exam-type-select {
+    font-size: 14px; /* velikost písma pro čitelnost */
+    padding: 8px; /* vnitřní odsazení pro pohodlnější klikání */
+    margin-bottom: 15px; /* odstup dolů */
+}
+
+#search {
+    width: 600px; /* pevná šířka vyhledávacího pole */
+    padding: 8px; /* pohodlnější psaní */
+    margin-bottom: 15px; /* odstup dolů */
+}
+
+/* ------------------------ */
+/* Výsledky vyhledávání     */
+/* ------------------------ */
+#results {
+    margin-top: 20px; /* prostor nad výsledky */
+}
+
+.hidden {
+    display: none; /* skryje element */
+}
+
+/* --------------------------------- */
+/* Vyhledávací kontejner na středu   */
+/* --------------------------------- */
+.search-container {
+    display: flex; /* flexibilní rozložení */
+    justify-content: center; /* zarovná na střed horizontálně */
+    align-items: center; /* zarovná na střed vertikálně */
+    gap: 10px; /* mezera mezi prvky */
+    margin-bottom: 20px; /* spodní okraj */
+}
+
+/* ------------------------- */
+/* Jednotlivé otázky/odpovědi*/
+/* ------------------------- */
+.question {
+    border-bottom: 2px solid #ddd; /* oddělovací čára */
+    padding-bottom: 15px; /* odsazení dolů od obsahu */
+    margin-bottom: 15px; /* prostor mezi otázkami */
+}
+
+.answers {
+    padding-left: 20px; /* odsazení odpovědí vlevo */
+    margin-top: 10px; /* odsazení odpovědí od otázky */
+}
+
+.answer {
+    padding: 5px; /* pohodlnější vzhled odpovědi */
+    margin: 3px 0; /* odstupy mezi odpověďmi */
+    border-radius: 4px; /* zaoblené rohy */
+    background-color: #f7f7f7; /* světlé pozadí odpovědi */
+}
+
+.correct {
+    background-color: #c8e6c9; /* jemně zelené zvýraznění správné odpovědi */
+}
+
+.case-study {
+    color: #1565c0; /* Modrá barva textu, změň dle potřeby */
+    padding: 10px; /* Odsazení obsahu */
+    border-radius: 5px; /* Jemně zaoblené rohy */
+    margin-bottom: 10px; /* Odsazení od dalších prvků */
+}
+
+
+/* -------------------- */
+/* Levý toolbar (menu)  */
+/* -------------------- */
+#toolbar {
+    width: auto; /* dynamická šířka podle obsahu */
+    min-width: max-content; /* minimální možná šířka dle obsahu */
+    background-color: #f5f5f5; /* světlé pozadí */
+    padding: 20px; /* vnitřní odsazení obsahu od okraje */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* jemný stín pro prostorový efekt */
+}
+
+/* Obsah menu v toolbaru */
+#menu-content {
+    margin-top: 28px; /* horní odsazení obsahu menu */
+    font-size: 14px; /* velikost písma menu */
+}
+
+/* Tlačítko pro skrývání/zobrazení toolbaru */
+#toggle-btn {
+    cursor: pointer; /* ukazatel klikatelnosti */
+    float: right; /* zarovnané doprava */
+}
+
+/* --------------------- */
+/* Tlačítka plus a mínus */
+/* --------------------- */
+button.plus, button.minus {
+    border: none; /* bez ohraničení */
+    border-radius: 50%; /* kulatá tlačítka */
+    width: 25px; /* pevná šířka */
+    height: 25px; /* pevná výška */
+    color: white; /* bílá barva textu tlačítek */
+    cursor: pointer; /* klikatelné tlačítko */
+    font-weight: bold; /* tučné písmo */
+}
+
+button.plus { background-color: #4CAF50; } /* zelená barva "+" */
+button.minus { background-color: #F44336; } /* červená barva "-" */
+
+/* ------------------------------- */
+/* Výsledkové a stavové texty      */
+/* ------------------------------- */
+.result-success, .section-success {
+    color: green; /* zelený text - úspěch */
+    font-weight: bold; /* zvýraznění */
+}
+
+.result-fail, .section-fail {
+    color: red; /* červený text - neúspěch */
+    font-weight: bold; /* zvýraznění */
+}
+
+/* ---------------------------- */
+/* Finální status na spodku     */
+/* ---------------------------- */
+#result, .final-success, .final-fail {
+    text-align: center; /* vycentrovaný text */
+    width: 100%; /* šířka přes celý toolbar */
+    box-sizing: border-box; /* padding součástí šířky */
+    padding: 10px; /* vnitřní odsazení obsahu */
+    margin: 15px 0; /* vnější odsazení pro oddělení */
+    border-radius: 4px; /* jemně zaoblené rohy */
+    font-weight: bold; /* zvýraznění */
+}
+
+.final-success { background-color: #c8e6c9; } /* úspěch - zelené pozadí */
+.final-fail { background-color: red; color: white; } /* neúspěch - červené pozadí, bílý text */
+
+/* ------------------------------- */
+/* Celá sekce otázek zkoušky       */
+/* ------------------------------- */
+.exam-section {
+    position: relative; /* základní kontejner relativní pro absolutní prvky */
+    padding-bottom: 10px; /* dolní odsazení sekce */
+    margin-bottom: 5px; /* mezera mezi sekcemi */
+    width: auto; /* explicitní, ale výchozí stav – přizpůsobí se rodiči */
+}
+
+/* Nadpis sekce otázek */
+.exam-section h4 {
+    margin: 10px 0 2px 0; /* malé okraje nadpisu */
+}
+
+/* Oddělovač v sekci */
+.exam-section hr {
+    margin: 5px 0; /* malé mezery kolem oddělovače */
+}
+
+/* ------------------------------------- */
+/* Každý řádek s otázkou a ovládáním     */
+/* ------------------------------------- */
+.question-row {
+    display: flex; /* flexibilní uspořádání prvků v řádku */
+    align-items: center; /* zarovnání vertikálně na střed */
+    justify-content: flex-start; /* zarovnání obsahu odleva */
+    margin-bottom: 4px; /* mezera mezi řádky */
+}
+
+/* Levá část řádku s textem otázky */
+.question-text {
+    flex: 0 0 230px; /* pevná šířka levého textu otázky */
+}
+
+/* Blok s ovládáním (+/-) */
+.controls {
+    display: flex; /* flexibilní uspořádání tlačítek a čísla */
+    align-items: center; /* zarovnání prvků na střed vertikálně */
+    gap: 3px; /* mezery mezi prvky uvnitř */
+    justify-content: flex-start; /* tlačítka budou vlevo */
+    flex: 1; /* controls se natáhne přes celý dostupný prostor doprava */
+}
+
+/* Číselná hodnota mezi tlačítky */
+.controls span.count {
+    width: 20px; /* pevná šířka čísla mezi tlačítky */
+    text-align: center; /* vycentrování čísla */
+}
+
+/* Text "ještě lze ztratit bodů" napravo od tlačítek */
+.controls small.remaining-text {
+    margin-left: auto; /* TOTO zarovná text doprava */
+    /* position: static; text v přirozeném toku, žádné absolutní pozice */
+    position: absolute; /* umístění textu relativně k .exam-section */
+    right: 0;           /* zarovná na pravý kraj */
+    transform: translateY(-85%); /* přesné vertikální centrování */
+    font-size: 10px; /* drobný doplňkový text */
+    color: #555; /* decentní šedá barva */
+    white-space: nowrap; /* nezalomuje se text */
+}
+
+/* -------------------------------- */
+/* Zvýraznění skupin v selectu      */
+/* -------------------------------- */
+select optgroup {
+    font-weight: bold; /* tučné písmo pro nadpisy skupin */
+    color: #555; /* decentní barva */
+}

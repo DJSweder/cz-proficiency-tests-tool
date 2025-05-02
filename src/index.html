@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Zkouškový systém</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="toolbar">
+    <button id="toggle-btn">☰</button>
+    <div id="menu-content">
+        <h3>Výběr typu zkoušky</h3>
+        <select id="exam-type-select"></select>
+        <div id="exam-details"></div>
+    </div>
+</div>
+
+<div id="main-content">
+    <h2>Vyhledávání otázek</h2>
+    <div class="search-container">
+        <select id="category">
+            <option>Pojištění</option>
+            <option>Úvěry</option>
+            <option>Investice</option>
+            <option>Penze</option>
+        </select>
+        <input type="text" id="search" placeholder="Zadej text k vyhledání...">
+    </div>
+    <div id="results"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
